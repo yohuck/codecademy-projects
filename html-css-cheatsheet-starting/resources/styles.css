@@ -1,0 +1,103 @@
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(240, 240, 240);
+    margin: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Bebas Neue";
+    background-image: url("../resources/apples-vs-oranges-health-benefits-1524606349.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin: 0%;
+}
+
+th {
+    background-color: rgb(10, 23, 26);
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1.05rem;
+    padding: 1rem;
+    opacity: 80%;
+}
+
+
+td  {
+    background-color: rgb(224, 238, 233);
+    padding: 1em;
+    width: 200px;
+    font-size: 1.2rem;
+    opacity: 90%;
+    height: 220px;
+}
+
+table {
+    margin: 0 auto;
+    margin-top: 3.5%;
+    
+}
+
+.square1 {
+    height: 4rem;
+    width: 4rem;
+    background-color:rgb(175, 214, 85);
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow:2px 2px 4px #000000;
+}
+
+.square1:hover {
+    box-shadow: 4px 4px 8px #000000;
+}
+
+.square2 {
+    height: 5rem;
+    width: 5rem;
+    background-color:#ee9b00ff;
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow:2px 2px 4px #000000;
+}
+
+.square2:hover {
+    box-shadow: 4px 4px 8px #000000;
+}
+
+.inline {
+    display: inline;
+    margin: 2%;
+}
+
+
+.inline-block {
+    display: inline-block;
+    margin: 2%;
+}
+
+
+.block {
+    display: block;
+    margin: 2%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    display: inline;
+    
+}
+
+.inline-block h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
