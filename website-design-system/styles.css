@@ -44,6 +44,7 @@ img:hover {
     padding: 1% 0;
     border: #363636ff solid 1px;
     background-color: white;
+    text-align: center;
 }
 
 .container h2 {
@@ -156,6 +157,7 @@ h1{
 }
 
 section .fonts__fonts {
+    text-align: left;
     display: inline-block;
     margin: 1rem 1rem;
 }
