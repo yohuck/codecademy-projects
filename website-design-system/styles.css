@@ -21,7 +21,7 @@ header {
 
 section{
     width: 90%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     background-color: white;
 
@@ -68,11 +68,11 @@ section{
     margin: 0 auto;
     }
 
-.colors p {
+.color-class p {
     font-size: 0.7rem;
     }
 
-.colors .color:hover{
+    .color-class:hover{
     opacity: 80%;
     }
 
@@ -80,3 +80,11 @@ section{
     background-color: #e5e5e5ff;
     opacity: 50%;
     }
+
+section .color-class {
+    display: inline-block;
+    padding: 4rem 5rem;
+    margin: 1rem 1rem;
+    text-align: center;
+    min-width: 30px;
+}
