@@ -27,9 +27,9 @@ header .headdiv {
 
 img {
     display: inline-block;
-    width: 7.5rem;
+    width: 5rem;
     float: right;
-    margin: auto;
+    margin:1rem;
 
 }
 
@@ -40,8 +40,14 @@ img:hover {
 .container {
     width: 90%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 1rem auto;
     padding: 1% 0;
+    border: #363636ff solid 1px;
+    background-color: white;
+}
+
+.container h2 {
+    margin: 2%;
 }
 
 section{
