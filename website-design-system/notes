@@ -46,7 +46,5 @@ $gradient-radial: radial-gradient(#363636ff, #242f40ff, #cca43bff, #e5e5e5ff, #f
 
 
 font-family: 'Roboto', sans-serif;
-font-family: 'Rubik Mono One', sans-serif;
-font-family: 'Staatliches', cursive;
-
-////
+font-family: 'Source Code Pro', monospace;
+font-family: 'Tourney', cursive;
