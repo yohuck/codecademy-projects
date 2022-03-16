@@ -41,10 +41,44 @@ nav a {
 
 .hero {
     background-image: url(./img-mission-background.webp);
+    background-position: center;
     display: flex;
+    flex-direction: column;
     height: 700px;
     background-repeat: no-repeat;
-    margin: 50px;
     justify-content: center;
     width: 90%;
+    margin: 0 auto;
+}
+
+.hero-copy {
+    background-color: black;
+}
+
+.hero-copy * {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.totm {
+    max-width: 1000px;
+    margin: 5rem auto;
+}
+
+.tea-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.tea-container img {
+    width: 300px;
+    height: 200px;
+}
+
+.tea {
+    margin: 0 1rem;
 }
