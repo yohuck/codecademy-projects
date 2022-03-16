@@ -16,10 +16,15 @@ body {
     align-items: center;
     justify-content: space-between;
     /* margin: 10px; */
-    position: sticky;
-    top: 0px;
     background-color: black;
     border-bottom: 1px solid seashell;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 5;
 }
 
 .header img {
@@ -80,5 +85,35 @@ nav a {
 }
 
 .tea {
-    margin: 0 1rem;
+    margin: 0 10px;
+}
+
+.tea h4 {
+    margin-top: 10px;
+}
+
+.locations {
+    background-image: url(./img-locations-background.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+}
+
+.loc {
+    background-color: black;
+    margin: auto 40px;
+    width: 300px;
+}
+
+.locations h1 {
+    position: absolute;
+    margin-top: 5rem;
+}
+
+.bottom {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 40px;
 }
