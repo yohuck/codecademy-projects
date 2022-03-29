@@ -28,10 +28,13 @@ ul {
 }
 
 li {
-    padding: 1em;
+    padding: 0.5em;
     text-align: center;
     text-decoration: none;
+    margin: 1em;
     margin-top: -2em;
+    border: 1px solid black;
+    border-radius: 10px;
 
 }
 
@@ -62,7 +65,9 @@ section {
 
 .row {
     display: flex;
-    margin: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+
 
 
 }
@@ -74,6 +79,10 @@ section {
 
 .icon  {
     width: 40%;
+}
+
+.item:hover {
+    transform: scale(1.1);
 }
 
 .person {
@@ -89,6 +98,7 @@ section {
 }
 
 .hero {
+ 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,4 +144,16 @@ footer {
     max-width: 700px;
     color: black;
     background: rgba(255, 217, 125, 0.85);
+}
+
+.pix {
+    max-width: 150px;
+}
+
+.pix img {
+    border-radius: 999px;
+}
+
+.person:hover {
+    transform: scale(1.1);
 }
