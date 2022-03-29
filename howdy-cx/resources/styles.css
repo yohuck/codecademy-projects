@@ -5,7 +5,7 @@
 
 html{
     font-family: 'Merriweather', serif;
-    background-image: url(./photos/pexels-rachel-claire-4825669.jpg);
+    /* background-image: url(./photos/pexels-rachel-claire-4825669.jpg); */
     background-size: cover;
     background-attachment: fixed;
 
@@ -18,24 +18,39 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 2em;
 }
 
-ul {
+nav {
+    border: 1px solid black;
+}
+
+.ul {
     display: flex;
     list-style: none;
     text-align: center;
-    padding: 0;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
+    margin-top: -3rem;
 }
 
-li {
-    padding: 0.5em;
+.ul h5 {
+    padding: 0.2em 0em;
+    margin: 0.5em;
     text-align: center;
     text-decoration: none;
-    margin: 1em;
-    margin-top: -2em;
     border: 1px solid black;
-    border-radius: 10px;
+    font-family: 'Staatliches', cursive;
+    font-size: 1rem;
+    width: 100%;
+    list-style: none;
 
+}
+
+.ul h5:hover {
+    background-color: #edf797;
 }
 
 a {
@@ -112,13 +127,16 @@ section {
 }
 
 .hero h1 {
+    font-size: 5rem;
     padding: 0;
+    padding-top: 1rem;
     width: 70%;
     max-width: 700px;
     opacity: 1;
     z-index: 5;
     color: black;
     background: rgba(255, 217, 125, 0.85);
+    font-family:'Staatliches', cursive;
 
 }
 
@@ -129,12 +147,15 @@ section {
     max-width: 700px;
     color: black;
     background: rgba(255, 217, 125, 0.85);
+    font-family: 'Merriweather', serif;
+    font-kerning: auto;
+    padding-bottom: 1rem;
 }
 
 .services  {
     /* border: 1px solid black; */
     padding: 1em;
-    margin: 1em auto;
+    margin:  auto;
 }
 
 footer {
@@ -152,8 +173,19 @@ footer {
 
 .pix img {
     border-radius: 999px;
+    object-fit: cover;
 }
 
 .person:hover {
     transform: scale(1.1);
+}
+
+h4 {
+    font-family:'Staatliches', cursive;
+    font-size: 2rem;
+}
+
+h7 {
+    font-family:'Staatliches', cursive;
+    font-size: 1rem;
 }
