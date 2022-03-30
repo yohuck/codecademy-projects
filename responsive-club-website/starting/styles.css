@@ -1,0 +1,59 @@
+:root {
+    --smoky-black: #14110F;
+    --jet: #34312D;
+    --gray-web: #7E7F83;
+    --mustard: #FCDC4D;
+    --cultured: #F3F3F4;
+  }
+
+/* font-family: 'Fugaz One', cursive;
+font-family: 'Titillium Web', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Fugaz One', cursive;
+}
+
+nav {
+    height: 4rem;
+    background-color: var(--gray-web);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img {
+    height: 2.5rem;
+    justify-self: flex-start;
+    align-self: center;
+    margin: 0 0 0 1.5rem;
+    /* position: absolute; */
+    /* top: 0.25rem;
+    left: 2%; */
+}
+
+nav ul {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+nav li, nav a {
+    font-family: ;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--jet);
+    text-transform: uppercase;
+}
+
+nav li:hover{
+    color: var(--cultured);
+    font-weight: 600;
+}
