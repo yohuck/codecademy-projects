@@ -194,8 +194,9 @@ video:hover, video:focus {
         margin: 0 0.5rem;
     }
 
-    .row .btn {
+    .row .text .btn {
         margin: 2rem auto;
+        width: 100%;
     }
 
 }
