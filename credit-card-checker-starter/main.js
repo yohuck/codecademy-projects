@@ -24,10 +24,34 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+const validateCred = arr => {
+    const currentComp = [];
+    let count = 0;
+    let split = [];
+    let total = 0;
+    let splitter = ''
 
+    for (let i = arr.length-1; i >= 0; i--) {
+        if (count % 2 == 0 ) {
+            currentComp.push(arr[i]);
+            count ++;
+        } else {
+            currentComp.push(arr[i]*2);
+            count++;}
+    } console.log(currentComp);
+    currentComp.map(x => {
+        if (x > 9 ) {
+            x = x-9;
+        } else x=x;
+        split.push(x);
+        console.log(split);
+    })  
+total = split.reduce((previousValue, currentValue) => previousValue + currentValue, total);
+if (total % 10 === 0) return true;
+else return false
+}
 
-
-
+console.log(validateCred(invalid1));
 
 
 
