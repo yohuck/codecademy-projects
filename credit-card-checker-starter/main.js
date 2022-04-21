@@ -38,21 +38,62 @@ const validateCred = arr => {
         } else {
             currentComp.push(arr[i]*2);
             count++;}
-    } console.log(currentComp);
+    };
     currentComp.map(x => {
         if (x > 9 ) {
             x = x-9;
         } else x=x;
         split.push(x);
-        console.log(split);
     })  
 total = split.reduce((previousValue, currentValue) => previousValue + currentValue, total);
 if (total % 10 === 0) return true;
 else return false
 }
 
-console.log(validateCred(invalid1));
+const findInvalidCards = cardsToCheck => {
+    invalidCards = []
+    for (let i = 0; i < cardsToCheck.length; i++) {
+        if (validateCred(cardsToCheck[i]) === false) {
+        invalidCards.push(cardsToCheck[i])};}
+        return invalidCards;
+    }
+
+console.log(findInvalidCards(batch));
+
+const amex = arrayToCheck => {
+    if(arrayToCheck[0] === 3 ) return true;
+    else return false;
+}
+
+const visa = arrayToCheck => {
+    if(arrayToCheck[0] === 4 ) return true;
+    else return false;
+}
+
+const masterCard = arrayToCheck => {
+    if(arrayToCheck[0] === 5 ) return true;
+    else return false;
+}
+
+const discover = arrayToCheck => {
+    if(arrayToCheck[0] === 6 ) return true;
+    else return false;
+}
+
+const invalidCompany = arrayToCheck => {
+    if (arrayToCheck[0] != 3 && arrayToCheck[0] != 4 && arrayToCheck[0] != 5 && arrayToCheck[0] != 6) return true;
+    else return false;
+}
 
 
+const idInvalidCardCompanies = arr => {
+    let invalidCompanies = []
+    if (arr.some(visa)) invalidCompanies.push('Visa');
+    if (arr.some(masterCard)) invalidCompanies.push('MasterCard');
+    if (arr.some(amex)) invalidCompanies.push('Amex (American Express)');
+    if (arr.some(discover)) invalidCompanies.push('Discover');
+    if (arr.some(invalidCompany)) invalidCompanies.push('Company Not Found');
+    return invalidCompanies;
+}
 
-
+console.log(idInvalidCardCompanies(findInvalidCards(batch)));
