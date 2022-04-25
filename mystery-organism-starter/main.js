@@ -20,27 +20,41 @@ const pAequorFactory = (speciesNum, strand) => {
     mutate() {
       const randomFifteen = Math.floor(Math.random()*14);
       let mutateIndex = this.dna[randomFifteen];
-      console.log(this.dna);
-      console.log(randomFifteen);
-      console.log(mutateIndex);
       const dnaBase = ['A', 'T', 'C', 'G'];
-      console.log(dnaBase);
       const mutateIndexValue = element => element === mutateIndex;
       const indexOf = dnaBase.findIndex(mutateIndexValue);
-      console.log (indexOf);
       dnaBase.splice(indexOf,1);
-      console.log(dnaBase);
       const replaceBase = dnaBase[Math.floor(Math.random()*3)];
-      console.log(replaceBase);
       this.dna[randomFifteen] = replaceBase;
-      console.log(this.dna);
+    },
+    compareDNA(specimenToCompare) {
+      let count = 0;
+      for (let i = 0; i < 15; i++){
+        if (specimenToCompare.dna[i] === this.dna[i]) {
+          count++;
+        } else count = count;
+      } console.log(`Specimen #${this.speciesNum} and specimen #${specimenToCompare.speciesNum} have ` + ((count/15)*100).toFixed(2) + '% DNA in common.');
+    },
+    willLikelySurvive() {
+      let surviveCount = 0
+      for (let i=0; i< 15; i++) {
+        if (this.dna[i] === 'C' || this.dna[i] === 'G') {
+          surviveCount++;
+        } else surviveCount = surviveCount;
+      } if ((surviveCount/15) >= .60) return true;
+      else return false;
     }
   }
 }
 
-let test = pAequorFactory(1,mockUpStrand());
-console.log(test)
-test.mutate();
-console.log(test);
-test.mutate();
-console.log(test)
+const toStudy = () => {
+  let studyArray = [];
+  for (let i=1; studyArray.length != 30; i++) {
+    let temp = pAequorFactory(i, mockUpStrand());
+    if (temp.willLikelySurvive() === true) {
+      studyArray.push(temp);
+    }
+  } return studyArray;
+};
+
+console.log(toStudy().length);
