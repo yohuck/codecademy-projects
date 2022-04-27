@@ -104,16 +104,33 @@ header h2 {
     width: 200%;
     /* background-color: #b65219; */
     display: flex;
-    background-color: #b65219;
+    background-color: var(--dnd-blue);
 
 }
 
-.thing:hover {
+.thing-reverse  {
+    width: 200%;
+    /* background-color: #b65219; */
+    display: flex;
+    background-color: var(--dnd-blue);
+    transform: translate(-50%, 0);
+}
+
+.moveLeft {
     transform: translate(-50%, 0);
     transition-duration: 0.5s;
 }
 
 .thing:not(:hover) {
+    /* transform: translate(-50%, 0); */
+    transition-duration: 1s;
+}
+.thing-reverse:hover {
+    /* transform: translate(0%, 0); */
+    transition-duration: 0.5s;
+}
+
+.thing-reverse:not(:hover) {
     /* transform: translate(-50%, 0); */
     transition-duration: 1s;
 }
@@ -123,13 +140,23 @@ header h2 {
     max-width: 350px;
 }
 
+.thing-reverse h3 {
+    width: 100%;
+    max-width: 350px;
+}
+
 .thing p {
     width: 100%;
     max-width: 350px;
 }
 
+.thing-reverse p {
+    width: 100%;
+    max-width: 350px;
+}
+
 .results {
-    background-color: #30699E;
+    background-color: var();
     display: flex;
     align-items: center;
     justify-content: center;

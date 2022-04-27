@@ -26,15 +26,50 @@ let choosing = (object) => {
         let chooser = generateRandomNumber(object[property].length)
         switch (property) {
             case 'classes': 
-                currentIdea.push('Class: ' + object[property][chooser]);
+                currentIdea.push(object[property][chooser]);
                 break;
             case 'races': 
-                currentIdea.push('Race: ' + object[property][chooser]);
+                currentIdea.push(object[property][chooser]);
                 break;
             case 'things':
-                currentIdea.push('Their thing: ' + object[property][chooser]);
+                currentIdea.push(object[property][chooser]);
         }
     } return currentIdea;
 }
 
 console.log(choosing(character));
+
+let button = document.getElementById('button');
+let state = true;
+button.addEventListener('click', function(event) {
+    
+    let thisCharacter = choosing(character);
+    if (state === true ) {
+        const raceUpdate = document.getElementById('raceTag');
+        raceUpdate.textContent = thisCharacter[1];
+        const classUpdate = document.getElementById('classTag');
+        classUpdate.textContent = thisCharacter[0];
+        const thingUpdate = document.getElementById('thingTag');
+        thingUpdate.textContent = thisCharacter[2];
+
+        const raceSlide = document.getElementById('race');
+        raceSlide.setAttribute('style', 'transform: translate(-50%,0');
+        const classSlide = document.getElementById('class');
+        classSlide.setAttribute('style', 'transform: translate(0%,0');
+        const thingSlide = document.getElementById('thing');
+        thingSlide.setAttribute('style', 'transform: translate(-50%,0');
+        state = false;
+        } else {
+            const raceSlide = document.getElementById('race');
+        raceSlide.setAttribute('style', 'transform: translate(0%,0');
+        const classSlide = document.getElementById('class');
+        classSlide.setAttribute('style', 'transform: translate(-50%,0');
+        const thingSlide = document.getElementById('thing');
+        thingSlide.style.transform = 'translate(0%,0)';
+        state = true;
+        }
+    }
+)
+// let raceUpdate = document.getElementById("raceTag");
+// raceUpdate.innerHTML = "Test";
+
