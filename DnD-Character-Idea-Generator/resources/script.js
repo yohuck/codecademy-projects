@@ -2,7 +2,7 @@ const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Pal
 
 const races = ['Dragonborn', 'Dwarf', 'Elf', 'Gnome', 'Half-Elf', 'Halfling', 'Half-Orc', 'Human', 'Tiefling']
 
-const things = ['Dresses in drag at every opportunity', 'Has a terrible gambling problem', 'Can never remember names', 'Believes they are a teenager from the Earth year 2022 trapped in their Dungeons & Dragoons game', 'is constantly hungry', "Has a hard time pronuncing locations correctly", 'is terrified of magic', 'tries to befriend every horse they encounter', 'Is always offering terrible financial advice', 'Loves to sleep in', 'Loves to cook but is terrible at it']
+const things = ['Dresses in drag at every opportunity', 'Has a terrible gambling problem', 'Can never remember names', 'Believes they are a teenager from the Earth year 2022 trapped in their Dungeons & Dragons game', 'is constantly hungry', "Has a hard time pronuncing locations correctly", 'is terrified of magic', 'tries to befriend every horse they encounter', 'Is always offering terrible financial advice', 'Loves to sleep in', 'Loves to cook but is terrible at it']
 
 const character = {
     classes : classes,
@@ -59,7 +59,10 @@ button.addEventListener('click', function(event) {
         const thingSlide = document.getElementById('thing');
         thingSlide.setAttribute('style', 'transform: translate(-50%,0');
         const body = document.getElementById('body')
-        body.setAttribute('style', "background-color: var(--dnd-orange)")
+        body.setAttribute('style', "background-position: 125%;")
+        const wrapper = document.getElementById('wrapper')
+        wrapper.setAttribute('style', "background-color: var(--dnd-orange); color: var(--dnd-yellow);")
+
         state = false;
         } else {
             const raceUpdate = document.getElementById('raceTag-2');
@@ -77,7 +80,9 @@ button.addEventListener('click', function(event) {
         const thingSlide = document.getElementById('thing');
         thingSlide.style.transform = 'translate(0%,0)';
         const body = document.getElementById('body')
-        body.setAttribute('style', "background-color: var(--dnd-blue)")
+        body.setAttribute('style', "background-position: 220%;")
+        const wrapper = document.getElementById('wrapper')
+        wrapper.setAttribute('style', "background-color: var(--dnd-blue);")
         state = true;
         }
     }
